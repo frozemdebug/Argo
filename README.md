@@ -1,6 +1,6 @@
 # 🤖 ARGO 2.0 — Assistente Inteligente com Memória
 
-> "Não é só um assistente. É o começo de um sistema."
+> "EM DESENVOLVIMENTO"
 
 O **ARGO 2.0** é um assistente virtual em Python capaz de conversar naturalmente, aprender com o usuário e construir memória ao longo do tempo.
 
