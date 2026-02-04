@@ -1,43 +1,108 @@
-# 🤖 ARGO 2.0 — Assistente Inteligente com Memória
+# 🛡️ ARGO GUARDIÃO
+### Seu Assistente de Defesa Digital Offline
 
-> "EM DESENVOLVIMENTO"
-
-O **ARGO 2.0** é um assistente virtual em Python capaz de conversar naturalmente, aprender com o usuário e construir memória ao longo do tempo.
-
-Projetado para ser leve, expansível e extremamente personalizável.
-
-Este projeto marca a evolução de um assistente simples para uma arquitetura pronta para se tornar um verdadeiro sistema inteligente.
+> "A melhor defesa é aquela que observa antes do perigo existir."
 
 ---
 
-## 🚀 Features
+## Sobre o Projeto
 
-✅ Conversação com IA  
-✅ Personalidade própria  
-✅ Memória persistente  
-✅ Aprende com o usuário  
-✅ Estrutura limpa e escalável  
-✅ Fácil de modificar  
-✅ Pronto para upgrades  
+O **ARGO Guardião** é um assistente de segurança desenvolvido para monitorar, analisar e proteger ambientes digitais de forma leve e eficiente.
+
+Criado com foco em aprendizado prático de **Cybersecurity**, o projeto simula ferramentas utilizadas por profissionais da área defensiva (Blue Team).
+
+⚠️ Este projeto é exclusivamente educacional e voltado para **segurança defensiva**.
 
 ---
 
-## 🧠 Como funciona?
+## Funcionalidades
 
-O ARGO utiliza:
-
-- API de IA para linguagem natural  
-- Arquivo JSON como memória permanente  
-- Prompt de personalidade para dar identidade  
-- Loop contínuo de conversa  
-
-Quanto mais você usa… mais ele "conhece" você.
+### Núcleo Inteligente
+- IA leve com memória local  
+- Personalidade configurável  
+- Respostas rápidas  
+- Estrutura modular  
 
 ---
 
-## ⚙️ Instalação
+### 🛡️ Segurança do Sistema
+✔ Scanner de arquivos suspeitos  
+✔ Monitor de processos  
+✔ Visualizador de conexões ativas  
+✔ Detecção básica de riscos  
 
-Clone o projeto:
+---
 
-```bash
-git clone https://github.com/frozemdebug/argo-assistant.git
+### Segurança de Rede
+✔ Scanner de portas otimizado  
+✔ Banner grabbing  
+✔ Detector de dispositivos  
+✔ Alertas de portas potencialmente perigosas  
+
+---
+
+## ⚙️ Tecnologias
+
+- Python 🐍  
+- Socket  
+- Threading  
+- JSON Memory  
+- OS Tools  
+
+Projeto pensado para rodar até em máquinas modestas ou ambientes Linux móveis como Termux.
+
+---
+
+## Estrutura
+ARGO_GUARDIAO/ ├── argo.py ├── ai_core.py ├── security_tools.py ├── brain.json ├── memory.json
+Copiar código
+
+---
+
+## Objetivo
+
+Este projeto foi criado para desenvolver habilidades reais em:
+
+- Cybersecurity defensiva  
+- Automação  
+- Monitoramento  
+- Arquitetura de ferramentas  
+- Python aplicado  
+
+---
+
+## ⚠️ Aviso
+
+O ARGO Guardião deve ser utilizado apenas:
+
+✅ em redes próprias  
+✅ ambientes de laboratório  
+✅ estudos  
+
+Nunca utilize ferramentas de segurança sem autorização.
+
+---
+
+## 🔮 Futuro do Projeto
+
+- Monitoramento em tempo real  
+- Detecção de comportamento suspeito  
+- Dashboard visual  
+- Sistema de alertas inteligentes  
+- Mapeamento de rede  
+- Modo sentinela automático  
+
+---
+
+## 👑 Autor
+
+**frozemdebug**
+
+> Construindo hoje o que os especialistas usarão amanhã.
+
+---
+
+## ⭐ Se curtir o projeto
+
+Dá uma estrela no repositório 🙂  
+Isso ajuda o projeto a crescer!
