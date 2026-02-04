@@ -1,0 +1,91 @@
+import json
+import os
+from openai import OpenAI
+
+client = OpenAI(api_key="SUA_API_KEY_AQUI")
+
+# ========= MEMÓRIA =========
+
+def carregar_memoria():
+    try:
+        with open("memoria.json", "r") as f:
+            return json.load(f)
+    except:
+        return {}
+
+def salvar_memoria(memoria):
+    with open("memoria.json", "w") as f:
+        json.dump(memoria, f, indent=4)
+
+memoria = carregar_memoria()
+
+# ========= PERSONALIDADE =========
+
+PERSONALIDADE = """
+Você é ARGO, um assistente futurista, inteligente e levemente sarcástico.
+Chame o usuário de chefe.
+Seja direto, mas carismático.
+Nunca pareça robótico.
+"""
+
+print("🤖 ARGO 2.0 ONLINE")
+print("Digite 'sair' para encerrar.\n")
+
+# ========= LOOP =========
+
+while True:
+
+    user = input("Chefe: ")
+
+    if user.lower() == "sair":
+        print("ARGO: Encerrando sistemas. Até breve, chefe.")
+        break
+
+
+    # ======== APRENDER ========
+
+    if user.lower().startswith("aprenda que"):
+        try:
+            frase = user.replace("aprenda que", "").strip()
+
+            chave, valor = frase.split(" é ")
+
+            memoria[chave.strip()] = valor.strip()
+            salvar_memoria(memoria)
+
+            print("ARGO: Informação armazenada permanentemente.")
+        except:
+            print("ARGO: Use o formato -> aprenda que X é Y")
+
+        continue
+
+
+    # ======== LEMBRAR ========
+
+    if user.lower().startswith("lembra de"):
+        chave = user.replace("lembra de", "").strip()
+
+        if chave in memoria:
+            print(f"ARGO: Você me ensinou que {chave} é {memoria[chave]}")
+        else:
+            print("ARGO: Ainda não sei isso, chefe.")
+
+        continue
+
+
+    # ======== CONTEXTO ========
+
+    contexto_memoria = "\n".join(
+        [f"{k} é {v}" for k, v in memoria.items()]
+    )
+
+    resposta = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[
+            {"role": "system", "content": PERSONALIDADE},
+            {"role": "system", "content": f"Memória do usuário:\n{contexto_memoria}"},
+            {"role": "user", "content": user}
+        ]
+    )
+
+    print("\nARGO:", resposta.choices[0].message.content, "\n")
